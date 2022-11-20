@@ -21,7 +21,7 @@ public class FolderReadingAndProcessing {
     }
 
     private Document docRetrieving(String fileInn) {
-        Pattern emailPattern = Pattern.compile("\\b[\\w\\.,]+@\\w+\\.\\w{2,3}");
+        Pattern emailPattern = Pattern.compile("\\b[\\w,]+@\\w+\\.\\w{2,3}");
         Pattern phonePattern = Pattern.compile("\\+\\(\\d{2}\\)\\d{7}");
         Pattern documentPattern = Pattern.compile("(\\d{4}-[A-za-z]{3}-){2}(\\d[A-Za-z]){2}");
 
@@ -43,7 +43,9 @@ public class FolderReadingAndProcessing {
     }
 
     public void readingAndProcessing() {
-        // D:\TeachMeSkills\Projects\Lesson17\src\resources
+        // src/resources
+        // 6
+
         try (DirectoryStream<Path> listOfFiles = Files.newDirectoryStream(Path.of(DocumentPath.getInputPathToFolder()))) {
             HashMap<String, Document> resume = new HashMap<>();
             List<String> list = listFill(listOfFiles);

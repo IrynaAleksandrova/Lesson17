@@ -17,8 +17,8 @@ public class Main {
 //          - так же сообщения на случай других исключительных ситуаций TeachMeSkills.by
 //    В конце работы программы следует вывести сообщение о том, сколько документов обработано и сколько было документов невалидного формата.
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ProcessException {
         FolderReadingAndProcessing process = new FolderReadingAndProcessing();
-        process.readingAndProcessing();
+        process.processReadingFiles();
     }
 }

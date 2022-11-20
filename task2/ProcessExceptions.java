@@ -1,4 +1,5 @@
 package task2;
+
 public class ProcessExceptions {
 
     private static String wrongFormat() {
@@ -8,7 +9,8 @@ public class ProcessExceptions {
     private static String noFiles() {
         return "Directory has 0 files";
     }
-    private static String belowZero(){
+
+    private static String belowZero() {
         return "Docs quantity to check must be > 0";
     }
 
@@ -19,7 +21,8 @@ public class ProcessExceptions {
     public static String getNoFiles() {
         return noFiles();
     }
-    public static String getBelowZero(){
+
+    public static String getBelowZero() {
         return belowZero();
     }
 }
